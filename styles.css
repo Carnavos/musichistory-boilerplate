@@ -1,0 +1,27 @@
+body {
+	font-family: "Arial";
+	font-size: 14px;
+}
+
+.nav {
+	clear: both;
+	border: 2px solid black;
+	padding: 10px 20px;
+	margin: 20px 70px;
+	background-color: pink;
+}
+
+.nav > li {
+	display: inline-block;
+}
+
+.nav li::after {
+
+content: "|";
+
+padding-right: 5px;
+
+padding-left: 5px;
+
+}
+
