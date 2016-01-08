@@ -1,27 +1,127 @@
+/* BODY */
+
 body {
+	width: 63%;
+	padding: 0;
+	margin: 0 auto;
 	font-family: "Arial";
 	font-size: 14px;
 }
 
+/* NAVIGATION BAR */
+
 .nav {
 	clear: both;
 	border: 2px solid black;
-	padding: 10px 20px;
-	margin: 20px 70px;
-	background-color: pink;
+	padding: 15px 15px;
+	background-color: #FFB4B0;
 }
+
+/* Horizontal Bars between list items */
 
 .nav > li {
 	display: inline-block;
+	border-right: 2px solid black;
+	padding: 0 5px 0 0;
 }
 
-.nav li::after {
-
-content: "|";
-
-padding-right: 5px;
-
-padding-left: 5px;
-
+.songData > li {
+	display: inline-block;
+	border-right: 2px solid black;
+	padding: 0 10px 0 10px;
 }
 
+
+li:last-child {
+	border-right: none;
+}
+
+/* Blue Sidebar*/
+
+.blueSidebar {
+	box-sizing: border-box;
+	border: 2px solid black;
+	padding: 0 15px;
+	float: left;
+	width: 23%;
+	background-color: #4DD7FA;
+	height: 400px;
+}
+
+.blueGenre input {
+}
+
+.blueGenre {
+	/*display: flex;*/
+	width: 100%;
+}
+.checkbox {
+	width: 40%;
+	display: inline;
+}
+
+.blueContent {
+	margin: auto;
+	padding: 20px 0;
+}
+
+.blueContent label {
+	margin-bottom: 20px;
+}
+
+
+
+/* Yellow Main Content */
+
+.mainContent {
+	box-sizing: border-box;
+	border: 2px solid black;
+	float: right;
+	width: 74%;
+	background-color: #FEFAC0;
+	height: 400px;
+}
+
+.mainContent h2 {
+	color: #785616;
+	padding-left: 40px;
+}
+
+.song {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+/* EXTRAS FOR OPTION ELEMENTS */
+
+/* Slider Styling*/
+/*
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 10px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid black;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: lightgrey;
+    margin-top: -5px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: grey;
+}*/

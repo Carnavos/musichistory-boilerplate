@@ -4,10 +4,114 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+	<nav>
+		<ul class="nav">
+			<li><a href="#">View music</a></li>
+			<li><a href="#">Add music</a></li>
+			<li><a href="#">Profile</a></li>
+		</ul>			
+	</nav>
+	<div class="blueSidebar">
 
+		<div class="blueContent">
+			<!-- Slider Section -->
+			<form>
+				<!-- Label for Slider -->
+			  			<label for="songLength">Song Length:</label>
+			  			<!-- Slider form -->
+			  			<input type="range" name="songLength" class="slider input" value="50" min="0" max="100">
+			</form>
+		</div>
+
+		<div class="blueContent">
+			<!-- label for artist select -->
+			<label for="Arist">Artist:</label><br>	
+			<!-- select box for Artist -->
+			<select name="Artist" class="input" id="artistSelect">
+				<option selected disabled>Options</option>
+				<option value="">Creed</option>
+				<option value="">Switchfoot</option>
+				<option value="">Alter Bridge</option>
+				<option value="">Trapt</option>
+				<option value="">Linkin Park</option>
+			</select>
+		</div>
+
+		<div class="blueContent">
+					<!-- label for Album select  -->
+					<label for="Album">Album:</label><br>
+					<!-- select box for Album-->
+					<select name="Album" id="albumName">
+						<option value="" selected disabled>Options</option>
+						<option value="">Album 1</option>
+						<option value="">Album 2</option>
+						<option value="">Album 3</option>
+						<option value="">Album 4</option>
+						<option value="">Album 5</option>
+					</select>
+		</div>
+		
+		<label for="genreBox">Genre:<br></label>
+		
+		<div class="blueGenre">
+			<!-- Label for Genre Checkbox -->
+			
+			<!-- Genre Checkbox -->
+			<form name="genreBox" action="demoform">
+				<span class="checkbox"><input type="checkbox" class="left" value="Rock" name="Rock">Rock</span>
+				<span class="checkbox"><input type="checkbox" class="right" value="Classical">Classical</span>
+				<span class="checkbox"><input type="checkbox" class="left" value="Pop">Pop</span>
+				<span class="checkbox"><input type="checkbox" class="right" value="Jazz">Jazz</span>
+				<span class="checkbox"><input type="checkbox" class="left" value="Blues">Blues</span>
+				<span class="checkbox"><input type="checkbox" class="right" value="Hip hop">Hip hop</span>
+			
+				<!-- Filter submit button -->
+				<input type="submit" class="button" value="Filter">
+			</form>
+		</div>
+
+	</div>
+
+	<!-- Main Yellow Content Div -->
+	<div class="mainContent">
+		<div class="song">
+			<h2>Song Name</h2>
+				<ul class="songData">
+					<li>Artist Name</li>
+					<li>Album Name</li>
+					<li>Genre</li>
+				</ul>
+		</div>
+		<div class="song">
+			<h2>Song Name</h2>
+				<ul class="songData">
+					<li>Artist Name</li>
+					<li>Album Name</li>
+					<li>Genre</li>
+				</ul>
+		</div>
+		<div class="song">
+			<h2>Song Name</h2>
+				<ul class="songData">
+					<li>Artist Name</li>
+					<li>Album Name</li>
+					<li>Genre</li>
+				</ul>
+		</div>
+		<div class="song">
+			<h2>Song Name</h2>
+				<ul class="songData">
+					<li>Artist Name</li>
+					<li>Album Name</li>
+					<li>Genre</li>
+				</ul>
+		</div>
+
+	</div>
 
 </body>
 </html>
