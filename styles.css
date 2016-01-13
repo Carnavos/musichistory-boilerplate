@@ -1,4 +1,4 @@
-/* BODY */
+/* Body */
 
 body {
 	width: 63%;
@@ -36,14 +36,14 @@ li:last-child {
 	border-right: none;
 }
 
-/* Blue Sidebar*/
+/* Blue Sidebar */
 
 .blueSidebar {
 	box-sizing: border-box;
 	border: 2px solid black;
 	padding: 0 15px;
 	float: left;
-	width: 23%;
+	width: 25%;
 	background-color: #4DD7FA;
 	height: 400px;
 }
@@ -51,14 +51,27 @@ li:last-child {
 .blueGenre input {
 }
 
-.blueGenre {
-	/*display: flex;*/
+/*.blueGenre {
 	width: 100%;
 }
+*/
 .checkbox {
 	width: 40%;
-	display: inline;
 }
+
+.checkContainer {
+	display: flex;
+}
+
+
+.left {
+	float: left;
+}
+
+.right {
+	float: left;
+}
+
 
 .blueContent {
 	margin: auto;
@@ -69,6 +82,10 @@ li:last-child {
 	margin-bottom: 20px;
 }
 
+/* Button */
+.button {
+	margin: auto;
+}
 
 
 /* Yellow Main Content */
@@ -77,7 +94,7 @@ li:last-child {
 	box-sizing: border-box;
 	border: 2px solid black;
 	float: right;
-	width: 74%;
+	width: 72%;
 	background-color: #FEFAC0;
 	height: 400px;
 }
@@ -124,4 +141,4 @@ input[type=range]:focus {
 
 input[type=range]:focus::-webkit-slider-runnable-track {
     background: grey;
-}*/
+}

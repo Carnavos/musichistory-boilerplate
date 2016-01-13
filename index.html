@@ -62,13 +62,19 @@
 			
 			<!-- Genre Checkbox -->
 			<form name="genreBox" action="demoform">
-				<span class="checkbox"><input type="checkbox" class="left" value="Rock" name="Rock">Rock</span>
-				<span class="checkbox"><input type="checkbox" class="right" value="Classical">Classical</span>
-				<span class="checkbox"><input type="checkbox" class="left" value="Pop">Pop</span>
-				<span class="checkbox"><input type="checkbox" class="right" value="Jazz">Jazz</span>
-				<span class="checkbox"><input type="checkbox" class="left" value="Blues">Blues</span>
-				<span class="checkbox"><input type="checkbox" class="right" value="Hip hop">Hip hop</span>
-			
+				<div class="checkContainer">
+					<div class="checkbox left">
+						<input type="checkbox" value="Rock" name="Rock">Rock
+						<input type="checkbox" value="Pop">Pop
+						<input type="checkbox"  value="Blues">Blues
+					</div>
+					<div class="checkbox right">
+						<input type="checkbox" value="Classical">Classical
+						<input type="checkbox" value="Jazz">Jazz
+						<input type="checkbox" value="Hip hop">Hip hop
+					</div>
+				</div>
+
 				<!-- Filter submit button -->
 				<input type="submit" class="button" value="Filter">
 			</form>
@@ -112,6 +118,8 @@
 		</div>
 
 	</div>
+
+<script src="songs.js"></script>
 
 </body>
 </html>
