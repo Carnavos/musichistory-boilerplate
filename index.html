@@ -4,92 +4,71 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<nav>
-		<ul class="nav">
-			<li><a href="#">View music</a></li>
-			<li><a href="#">Add music</a></li>
-			<li><a href="#">Profile</a></li>
-		</ul>			
-	</nav>
-	<div class="blueSidebar">
 
-		<div class="blueContent">
-			<!-- Slider Section -->
-			<form>
-				<!-- Label for Slider -->
-			  			<label for="songLength">Song Length:</label>
-			  			<!-- Slider form -->
-			  			<input type="range" name="songLength" class="slider input" value="50" min="0" max="100">
-			</form>
+  <!-- BOOTSTRAP NAVBAR START -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#" id="link-list">List Music</a></li>
+          <li><a href="#" id="link-add">Add Music</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- BOOTSTRAP NAVBAR END -->
+
+  <!-- LIST SECTION -->
+  <section class="visible" id="list-view">
+    <h1>Music List</h1>
+    <div class="row">
+      <div class="col-sm-4">Song: You Remind Me</div>
+      <div class="col-sm-4">Artist: Nickelback</div>
+      <div class="col-sm-4">Album: Silver Side Up</div>
+    </div>
+  </section>
+
+
+
+  <!-- ADD SECTION -->
+  <section class="hidden" id="add-view">
+    <h1>Add</h1>
+
+		<!-- Bootstrap Input Groups -->
+		<div class="input-group">
+  		<span class="input-group-addon" id="basic-addon1">Song</span>
+  		<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" id="songInput">
 		</div>
 
-		<div class="blueContent">
-			<!-- label for artist select -->
-			<label for="Arist">Artist:</label><br>	
-			<!-- select box for Artist -->
-			<select name="Artist" class="input" id="artistSelect">
-				<option selected disabled>Options</option>
-				<option value="">Creed</option>
-				<option value="">Switchfoot</option>
-				<option value="">Alter Bridge</option>
-				<option value="">Trapt</option>
-				<option value="">Linkin Park</option>
-			</select>
-		</div>
-
-		<div class="blueContent">
-					<!-- label for Album select  -->
-					<label for="Album">Album:</label><br>
-					<!-- select box for Album-->
-					<select name="Album" id="albumName">
-						<option value="" selected disabled>Options</option>
-						<option value="">Album 1</option>
-						<option value="">Album 2</option>
-						<option value="">Album 3</option>
-						<option value="">Album 4</option>
-						<option value="">Album 5</option>
-					</select>
+		<div class="input-group">
+  		<span class="input-group-addon" id="basic-addon2">Artist</span>
+  		<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2" id="artistInput">
 		</div>
 		
-		<label for="genreBox">Genre:<br></label>
-		
-		<div class="blueGenre">
-			<!-- Label for Genre Checkbox -->
-			
-			<!-- Genre Checkbox -->
-			<form name="genreBox" action="demoform">
-				<div class="checkContainer">
-					<div class="checkbox left">
-						<input type="checkbox" value="Rock" name="Rock">Rock
-						<input type="checkbox" value="Pop">Pop
-						<input type="checkbox"  value="Blues">Blues
-					</div>
-					<div class="checkbox right">
-						<input type="checkbox" value="Classical">Classical
-						<input type="checkbox" value="Jazz">Jazz
-						<input type="checkbox" value="Hip hop">Hip hop
-					</div>
-				</div>
-
-				<!-- Filter submit button -->
-				<input type="submit" class="button" value="Filter">
-			</form>
+		<div class="input-group">
+  		<span class="input-group-addon" id="basic-addon3">Album</span>
+  		<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon3" id="albumInput">			
 		</div>
+    
+    <!-- Bootstrap Button -->
+    <button type="button" class="btn btn-default" id="addButton">Add</button>
 
-	</div>
+	</section>
 
-	<!-- Main Yellow Content Div -->
-	<div class="mainContent">
-		<div id="song" class="song">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-		</div>
-	</div>
-
-<script src="songs.js"></script>
+	<script type="text/javascript" src="javascripts/list.js"></script>
+	<script type="text/javascript" src="javascripts/add.js"></script>
 
 </body>
 </html>
