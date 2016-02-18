@@ -1,17 +1,17 @@
-var addLink = document.getElementById("link-add");
-var addView = document.getElementById("add-view");
+var addLink = $("#link-add");
+var addView = $("#add-view");
 
 // DOM element variables
-var songInput = document.getElementById("songInput");
-var artistInput = document.getElementById("artistInput");
-var albumInput = document.getElementById("albumInput");
-var addButton = document.getElementById("addButton");
+var songInput = $("#songInput");
+var artistInput = $("#artistInput");
+var albumInput = $("#albumInput");
+var addButton = $("#addButton");
 
 
-addLink.addEventListener("click", function() {
-  listView.classList.add("hidden");
+$(addLink).click(function() {
+  $(listView).addClass("hidden");
 
-  addView.classList.add("visible");
-  addView.classList.remove("hidden");
+  $(addView).addClass("visible");
+  $(addView).removeClass("hidden");
 
 });
