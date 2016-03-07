@@ -1,29 +1,34 @@
 {
   "songs": [
     {
-      "name": "Nissan",
+      "name": "How You Remind Me",
       "artist": "Nickelback",
-      "album": "2006"
+      "album": "Silver Side Up",
+      "year": "2001"
     },
     {
-      "name": "Nissan",
+      "name": "With Arms Wide Open",
       "artist": "Creed",
-      "album": "2006"
+      "album": "Human Clay",
+      "year": "1999"
     },
     {
-      "name": "Nissan",
+      "name": "Crawling",
       "artist": "Linkin Park",
-      "album": "2006"
+      "album": "Hybrid Theory",
+      "year": "2000"
     },
     {
-      "name": "Nissan",
-      "artist": "Korn",
-      "album": "2006"
+      "name": "Never Gonna Give You Up",
+      "artist": "Rick Astley",
+      "album": "Whenever You Need Somebody",
+      "year": "1987"
     },
     {
-      "name": "Nissan",
+      "name": "Rollin'",
       "artist": "Limp Bizkit",
-      "album": "2006"
+      "album": "Chocolate Starfish",
+      "year": "2000"
     }
   ]
 }

@@ -6,7 +6,8 @@
   <title>Music History</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link rel="stylesheet" href="css/sample.css">
 </head>
 
 <body>
@@ -27,14 +28,18 @@
 
   <!-- LIST SECTION -->
   <section class="visible" id="list-view">
-    <h1>Music List</h1>
+    <div class="row">
+      <div class="col-sm-3">Name</div>
+      <div class="col-sm-3">Artist</div>
+      <div class="col-sm-3">Album</div>
+      <div class="col-sm-3">Year</div>
+    </div>
   </section>
 
 
 
   <!-- ADD SECTION -->
   <section class="hidden" id="add-view">
-    <h1>Add</h1>
 
 		<!-- Bootstrap Input Groups -->
 		<div class="input-group">
@@ -62,8 +67,7 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-	<script type="text/javascript" src="javascripts/list.js"></script>
-	<script type="text/javascript" src="javascripts/add.js"></script>
+	<script type="text/javascript" src="dist/bundle.js"></script>
 
 </body>
 </html>
