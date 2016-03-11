@@ -1,5 +1,4 @@
 'use strict';
-
 // List View
 let listLink = $("#link-list");
 let listView = $("#list-view");
@@ -26,3 +25,13 @@ $(addLink).click(function(event) {
   $(addView).removeClass("hidden");
 
 });
+
+// Add button switches view back to List
+$("#addButton").click(() => {
+	$(addView).addClass("hidden");
+		$(listView).addClass("visible");
+		$(listView).removeClass("hidden");
+	});
+
+
+

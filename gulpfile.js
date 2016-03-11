@@ -9,8 +9,8 @@ let buffer = require('vinyl-buffer');
 let gutil = require('gulp-util');
 let sourcemaps = require('gulp-sourcemaps');
 let assign = require('lodash.assign');
-var jshint = require('gulp-jshint');
-var watch = require('gulp-watch');
+let jshint = require('gulp-jshint');
+let watch = require('gulp-watch');
 
 
 // add custom browserify options here

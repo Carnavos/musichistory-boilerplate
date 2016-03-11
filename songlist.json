@@ -1,34 +1,34 @@
 {
-  "songs": [
-    {
+  "songs": {
+    "How": {
       "name": "How You Remind Me",
       "artist": "Nickelback",
       "album": "Silver Side Up",
       "year": "2001"
     },
-    {
+    "With": {
       "name": "With Arms Wide Open",
       "artist": "Creed",
       "album": "Human Clay",
       "year": "1999"
     },
-    {
+    "Crawling": {
       "name": "Crawling",
       "artist": "Linkin Park",
       "album": "Hybrid Theory",
       "year": "2000"
     },
-    {
+    "Never": {
       "name": "Never Gonna Give You Up",
       "artist": "Rick Astley",
       "album": "Whenever You Need Somebody",
       "year": "1987"
     },
-    {
+    "Rollin": {
       "name": "Rollin'",
       "artist": "Limp Bizkit",
       "album": "Chocolate Starfish",
       "year": "2000"
     }
-  ]
+  }
 }

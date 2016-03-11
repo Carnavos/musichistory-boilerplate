@@ -1,37 +1,20 @@
 'use strict';
 
-let songsData = [];
-
-let loader = {
-
-	songsLoad(callback) {
-		$.ajax({
-			url: "songlist.json"
-		}).done((data) =>{
-			// passes array one level deep to callback
-			songsData = data.songs;
-			// ES6 arrow function to repeat loader for every song in the parsed data
-			callback(songsData);
-		});
-	},
-
-	getSongs() {
-		return songsData;
-	},
-
-	addSong(song) {
-		songsData.push(song);
-		console.log("songsData: ", songsData);
-	},
-
-	// Map/remake songsData private array without deleted song
-	deleteSong(songName) {
-		// use ES6 filter/arrow to pass back only those that don't match with deleted song name
-		songsData = songsData.filter((song) => song.name !== songName);
-		console.log("songsData: ", songsData);
-		console.log("song deleted");
-	}
+function songsLoad(callback) {
+	return new Promise ((resolve, reject) => {
+	$.ajax({
+		url: "https://burning-heat-2902.firebaseio.com/songs/.json"
+		// method: "GET"
+	}).done((dataObject) =>{
+		console.log(`songsData loaded object: `, dataObject);
+		// changing to object pass instead of array
+		resolve(dataObject);
+	});
+	// alternate method to for in
+	// Object.keys(songList).forEach((key) => { });
+	});
 }
 
+
 // export the object with three methods inside
-module.exports = loader;
+module.exports = songsLoad;

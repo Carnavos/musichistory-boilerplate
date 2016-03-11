@@ -21,19 +21,138 @@
           <li><a href="#" id="link-list">List Music</a></li>
           <li><a href="#" id="link-add">Add Music</a></li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a id="logIn" href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+          <li><a id="signOut">Sign Out</a></li>
+        </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
   <!-- BOOTSTRAP NAVBAR END -->
 
+  <!-- BOOTSTRAP LOGIN MODAL -->
+  <!-- <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="loginmodal-container">
+        <h1>Login to Your Account</h1><br>
+        <div>
+        <input id="userEmail" type="text" name="user" placeholder="Email">
+        <input id="userPassword" type="password" name="pass" placeholder="Password">
+        <input id="loginButton" type="button" name="login" class="login loginmodal-submit" value="Login">
+        </div>
+        
+        <div class="login-help">
+        <a href="#">Register</a> - <a href="#">Forgot Password</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- END FIRST SAMPLE MODAL -->
+
+  <!-- BEGIN # MODAL LOGIN -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" align="center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+        </div>
+                
+        <!-- Begin # DIV Form -->
+        <div id="div-forms">
+                
+          <!-- Begin # Login Form -->
+          <form id="login-form">
+            <div class="modal-body">
+              <div id="div-login-msg">
+                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                  <span id="text-login-msg">Type your email and password.</span>
+              </div>
+              <input id="login_email" class="form-control" type="text" autofocus placeholder="Email (type ERROR for error effect)" required>
+              <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+              <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <div>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+              </div>
+              <div>
+                <!-- <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button> -->
+                <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+              </div>
+            </div>
+          </form>
+          <!-- End # Login Form -->
+                    
+          <!-- Begin | Lost Password Form -->
+<!--           <form id="lost-form" style="display:none;">
+            <div class="modal-body">
+              <div id="div-lost-msg">
+                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                  <span id="text-lost-msg">Type your Email.</span>
+                </div>
+              <input id="lost_email" class="form-control" type="text" placeholder="Email Address (type ERROR for error effect)" required>
+            </div>
+
+            <div class="modal-footer">
+              <div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+              </div>
+              <div>
+                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+              </div>
+            </div>
+          </form> -->
+          <!-- End | Lost Password Form -->
+                    
+          <!-- Begin | Register Form -->
+          <form id="register-form" style="display:none;">
+            <div class="modal-body">
+              <div id="div-register-msg">
+                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                <span id="text-register-msg">Register an account.</span>
+              </div>
+              <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+              <input id="register_email" class="form-control" type="text" placeholder="Email Address" required>
+              <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+            </div>
+            <div class="modal-footer">
+              <div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+              </div>
+              <div>
+                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                <!-- <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button> -->
+              </div>
+            </div>
+          </form>
+          <!-- End | Register Form -->
+                    
+        </div>
+        <!-- End # DIV Form -->
+                
+      </div> <!-- End Modal Dialog -->
+    </div> <!-- End Modal Content -->
+  </div>
+  <!-- END # MODAL LOGIN -->
+
+
+
   <!-- LIST SECTION -->
   <section class="visible" id="list-view">
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-sm-3">Name</div>
       <div class="col-sm-3">Artist</div>
       <div class="col-sm-3">Album</div>
       <div class="col-sm-3">Year</div>
-    </div>
+    </div> -->
   </section>
 
 
@@ -44,17 +163,17 @@
 		<!-- Bootstrap Input Groups -->
 		<div class="input-group">
   		<span class="input-group-addon" id="basic-addon1">Song</span>
-  		<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" id="songInput">
+  		<input type="text" class="form-control" placeholder="Enter Song Title" aria-describedby="basic-addon1" id="songInput">
 		</div>
 
 		<div class="input-group">
   		<span class="input-group-addon" id="basic-addon2">Artist</span>
-  		<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2" id="artistInput">
+  		<input type="text" class="form-control" placeholder="Enter Artist Title" aria-describedby="basic-addon2" id="artistInput">
 		</div>
 		
 		<div class="input-group">
   		<span class="input-group-addon" id="basic-addon3">Album</span>
-  		<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon3" id="albumInput">			
+  		<input type="text" class="form-control" placeholder="Enter Album Title" aria-describedby="basic-addon3" id="albumInput">			
 		</div>
     
     <!-- Bootstrap Button -->
@@ -63,11 +182,13 @@
 	</section>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-	<script type="text/javascript" src="dist/bundle.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+  <script type="text/javascript" src="dist/bundle.js"></script>
 
 </body>
 </html>
