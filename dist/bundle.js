@@ -139,11 +139,11 @@ function Authenticate (callback) {
 		    console.log("Error creating user:", error);
 		  } else {
 		    console.log("Successfully created user account with uid:", userData.uid);
+				// Automatically sign user in upon account creation
+				logIn(userEmail, userPassword);
 		  }
 		});
 
-		// Automatically sign user in upon account creation
-		logIn(userEmail, userPassword);
 	}
 
 	$("#signOut").click(() => {
@@ -184,7 +184,6 @@ function Authenticate (callback) {
 		    // toggle modal out
 		    $("#login-modal").modal('hide');
         $("#logIn").hide();
-	    	// callback();
 		  }
 		});
 	}
@@ -227,46 +226,10 @@ let Add = require("./add");
 let Delete = require("./delete");
 let Authenticate = require("./authentication");
 
-// jquery module
-// let $ = require("jquery");
-
-// DOM element variables
-// let songInput = $("#songInput");
-// let artistInput = $("#artistInput");
-// let albumInput = $("#albumInput");
 let addButton = $("#addButton");
 
 // Bring in the loader module
 let loader = require('./load');
-
-// // Declare variable for Firebase database
-// let myFirebase = new Firebase("https://burning-heat-2902.firebaseio.com/");
-
-
-// function userCreate (userEmail, userPassword) {
-// 	// let userEmail = $("#userEmail").val();
-// 	// let userPassword = $("#userPassword").val();
-// 	myFirebase.createUser({
-// 	  email    : userEmail,
-// 	  password : userPassword
-// 	}, function(error, userData) {
-// 	  if (error) {
-// 	    console.log("Error creating user:", error);
-// 	  } else {
-// 	    console.log("Successfully created user account with uid:", userData.uid);
-// 	  }
-// 	});
-// };
-
-// // Authentication event listener, always checking for authentication and will log message when user logs in/out and times out
-// myFirebase.onAuth(function(authData) {
-//   if (authData) {
-//     console.log("Authenticated with uid:", authData.uid);
-//   } else {
-//     console.log("Client unauthenticated.")
-//     readLoad();
-//   }
-// });
 
 // Runs Authenticate, then loads content
 Authenticate(readLoad);
@@ -333,8 +296,7 @@ function addEvents() {
 	});
 }
 
-
-
+// runs loader promise which downloads current Firebase songs, then runs pagePopulate 
 function readLoad () {
 	console.log(`readLoad init`);
 	// initial loader promise

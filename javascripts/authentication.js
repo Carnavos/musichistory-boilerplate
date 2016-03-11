@@ -110,11 +110,11 @@ function Authenticate (callback) {
 		    console.log("Error creating user:", error);
 		  } else {
 		    console.log("Successfully created user account with uid:", userData.uid);
+				// Automatically sign user in upon account creation
+				logIn(userEmail, userPassword);
 		  }
 		});
 
-		// Automatically sign user in upon account creation
-		logIn(userEmail, userPassword);
 	}
 
 	$("#signOut").click(() => {
@@ -155,7 +155,6 @@ function Authenticate (callback) {
 		    // toggle modal out
 		    $("#login-modal").modal('hide');
         $("#logIn").hide();
-	    	// callback();
 		  }
 		});
 	}
